@@ -13,7 +13,7 @@ function ExerciseVideos({exerciseVideos, name}) {
         gap: {lg:'110px', xs:'0'}
       }}
       >
-        {exerciseVideos?.slice(0,6).map((item, index) =>{
+        {exerciseVideos?.slice(0,4).map((item, index) =>{
           return(
             <a key={index} className='exercise-video'
              href={`https://www.youtube.com/watch?v=${item.video.videoId}`}

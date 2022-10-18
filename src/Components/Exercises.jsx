@@ -12,7 +12,7 @@ function Exercise({exercises, setExercises, bodyPart}) {
   const currentExercise = exercises.slice(indexOfFirstExercises, indexOfLastExercise)
   const paginate = (e, value)=>{
     setCurrentPage(value);
-    window.scrollTo({top:'1000', behavior:'smooth'})
+    window.scrollTo({top:'1500', behavior:'smooth'})
   }
   useEffect(()=>{
     const fetchExercisesData = async () =>{
