@@ -68,6 +68,7 @@ function SearchExercise({setExercises, setBodyPart, bodyPart}) {
           right:'0'
         }}
         onClick={handleSearch}
+        href='#exercises'
         >Search</Button>
       </Box>
       <Box sx={{position: 'relative', width:'100%', p:'20px'}}>
