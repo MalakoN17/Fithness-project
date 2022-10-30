@@ -2,9 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Stack, Typography } from "@mui/material";
 function ExerciseCard({ exercise }) {
+  const scrollUp = ()=>{
+    window.scroll({
+      top:0,
+      behavior:"smooth"
+    })
+  }
   return (
     <Link className="exercise-card" to={`/exercise/${exercise.id}`}>
-      <img src={exercise.gifUrl} alt={exercise.name} loading="lazy" />
+      <img onClick={scrollUp} src={exercise.gifUrl} alt={exercise.name} loading="lazy" />
       <Stack direction="row">
         <Button
           sx={{

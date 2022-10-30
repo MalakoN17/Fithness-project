@@ -3,6 +3,7 @@ import {Box} from '@mui/material';
 import HeroBanner from '../Components/HeroBanner';
 import SearchExercise from '../Components/SearchExercise';
 import Exercises from '../Components/Exercises';
+import Contact from '../Components/Contact';
 function Home() {
   const [bodyPart, setBodyPart] = useState('all')
   const [exercises, setExercises] = useState([])
@@ -19,6 +20,7 @@ function Home() {
       exercises={exercises} 
       bodyPart={bodyPart}
       />
+      <Contact />
     </Box>
     )
 }

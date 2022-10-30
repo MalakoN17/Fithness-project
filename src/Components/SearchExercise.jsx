@@ -34,7 +34,7 @@ function SearchExercise({setExercises, setBodyPart, bodyPart}) {
   }
   return (
     <Stack alignItems='center' mt='37px' justifyContent='center' p='20px'>
-      <Typography fontWeight={700} sx={{
+      <Typography color='#fff' fontWeight={700} sx={{
         fontSize: {lg:'44px', xs:'30px'}
       }} mb='50px' textAlign='center'>
         Awesome Exercises You <br/>
@@ -46,7 +46,8 @@ function SearchExercise({setExercises, setBodyPart, bodyPart}) {
           input: {
             fontWeight:'700',
             border:'none',
-            borderRadius:'4px'
+            borderRadius:'4px',
+            color:"white"
           },
           width:{lg: '800px', xs:'350px'},
           borderRadius:'40px'
