@@ -1,4 +1,5 @@
 import './App.css';
+import 'aos/dist/aos.css'
 import {Route, Routes} from 'react-router-dom'
 import Home from './Pages/Home'
 import Navbar from './Components/Navbar'

@@ -3,6 +3,8 @@ import Pagination from '@mui/material/Pagination';
 import {Box, Stack, Typography} from '@mui/material'
 import {exercisesOptions, fetchData} from '../utils/fetchData'
 import ExerciseCard from './ExerciseCard'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 function Exercise({exercises, setExercises, bodyPart}) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -25,9 +27,10 @@ function Exercise({exercises, setExercises, bodyPart}) {
       setExercises(exerciseData)
     }
     fetchExercisesData()
+    Aos.init({ duration: 1000 });
   },[bodyPart])
   return (
-    <Box id="exercises"
+    <Box id="exercises" data-aos="fade-up"
     sx={{mt: {lg: '110px'}}}
     mt='50px'
     p='20px'

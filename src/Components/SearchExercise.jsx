@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import {Box, Stack, TextField, Typography, Button} from '@mui/material'
 import { exercisesOptions, fetchData} from '../utils/fetchData'
 import HorizontalScrollbar from './HorizontalScrollbar'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 function SearchExercise({setExercises, setBodyPart, bodyPart}) {
   const [search, setSearch] = useState('')
@@ -15,6 +17,8 @@ function SearchExercise({setExercises, setBodyPart, bodyPart}) {
       setBodyParts(['all', ...bodyPartsData]);
     }
     fetchExercisesData()
+
+    Aos.init({ duration: 1000 });
   },[])
   const handleSearch = async () =>{
     if(search){
@@ -33,7 +37,7 @@ function SearchExercise({setExercises, setBodyPart, bodyPart}) {
     }
   }
   return (
-    <Stack alignItems='center' mt='37px' justifyContent='center' p='20px'>
+    <Stack alignItems='center' mt='37px' justifyContent='center' p='20px' data-aos="fade-up">
       <Typography color='#fff' fontWeight={700} sx={{
         fontSize: {lg:'44px', xs:'30px'}
       }} mb='50px' textAlign='center'>
@@ -49,7 +53,7 @@ function SearchExercise({setExercises, setBodyPart, bodyPart}) {
             borderRadius:'4px',
             color:"white"
           },
-          width:{lg: '800px', xs:'350px'},
+          width:{lg: '800px'},
           borderRadius:'40px'
         }}
         height='76px'

@@ -1,6 +1,7 @@
 import React from 'react'
 import emailjs from 'emailjs-com'
 import {Box, Stack, Typography} from '@mui/material'
+import LogoImage from '../assets/images/LogoFitness-preview.png'
 import Button from '@mui/material/Button';
 function Contact() {
     const sendEmail = (e)=>{
@@ -29,9 +30,9 @@ function Contact() {
             <Typography textAlign="center" variant='h3'>Contact form</Typography>
         <Stack flex="flex">
             <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
-            <div className='flex p-4 w-full items-center justify-center'>
-              <div className='py-4'>
-              <Typography>stay in touch</Typography>
+            <div className='sm:flex p-4 w-full items-center justify-center '>
+              <div className='py-4 flex items-center'>
+              <img src={LogoImage} alt="" />
               </div>
               <form onSubmit={sendEmail} >
                 <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
@@ -68,7 +69,7 @@ function Contact() {
                     name="massage" cols="30" rows="10"
                   ></textarea>
                 </div>
-                <button type="submit" value='send' className='w-full p-4 text-red-600 mt-4'>
+                <button type="submit" value='send' className='w-full p-4 text-black mt-4 bg-red-500 rounded-xl'>
                   Send Message
                 </button>
               </form>
